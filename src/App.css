@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --reddit-red: hsl(357, 72%, 53%);
+  --reddit-orange: hsl(14, 78%, 57%);
+  --reddit-soft-orange: hsl(11, 73%, 97%);
+  --reddit-black: hsl(0, 0%, 16%);
+  --reddit-white: hsl(0, 0%, 100%);
+  --standard-width: 1000px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--reddit-black);
+  background-color: var(--reddit-orange);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, h3, h4 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1{
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.1em;
+}
+
+.standard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: flex-start;
+  flex-basis: var(--standard-width);
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin: 0 10px;
 }
