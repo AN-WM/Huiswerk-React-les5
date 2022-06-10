@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--reddit-black);
+    color: var(--reddit-white);
+    padding: 10px 0;
+    font-size: 0.8em;
+    font-weight: lighter;
+}

@@ -1,21 +1,33 @@
 import React from 'react';
-import redditLogo from "../../assets/redditlogo.png";
 import './RedditHeader.css';
+import {NavLink} from "react-router-dom";
 
-function RedditHeader() {
+function RedditHeader({children}) {
+
     return (
         <header>
             <div className="standard-container">
                 <nav>
-                    <ul>
-                        <li>Hottest posts</li>
-                        <li>Reddit</li>
-                        <li>Memes</li>
-                    </ul>
+                    <div className="navlink-container">
+                        <NavLink to={"/"}
+                                     className="navlink">
+                            hottest posts
+                        </NavLink>
+                        <NavLink to={"/"}
+                                     className="navlink">
+                            reddit
+                        </NavLink>
+                        <NavLink to={"/"}
+                                     className="navlink">
+                            memes
+                        </NavLink>
+                    </div>
                 </nav>
 
-                <img src={redditLogo} alt="Reddit logo" id="reddit-logo"/>
-                <h1>Reddit</h1>
+                <div className="header-container">
+                {children}
+                </div>
+
             </div>
         </header>
     );

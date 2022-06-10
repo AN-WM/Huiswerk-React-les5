@@ -3,10 +3,17 @@
     flex-direction: column;
     flex-basis: 300px;
     justify-content: space-between;
-    height: 200px;
+    height: 160px;
     background-color: var(--reddit-white);
     padding: 10px;
     margin: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
+    box-shadow: 1px 2px 15px -6px rgba(231,97,58,0.45);
 }
+
+#tile-title {
+    color: var(--reddit-black);
+    text-decoration: none;
+}
+

@@ -3,9 +3,9 @@ import axios from "axios";
 import PostTile from "../../components/postTile/PostTile";
 import RedditHeader from "../../components/redditHeader/RedditHeader";
 import './Home.css';
+import redditLogo from "../../assets/redditlogo.png";
 
-function Home() {
-    const [error, toggleError] = useState(false);
+function Home({error, toggleError}) {
     const [redditPosts, setRedditPosts] = useState({});
 
     useEffect(() => {
@@ -24,15 +24,20 @@ function Home() {
 
         fetchData();
 
-    }, [])
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <>
-            <RedditHeader/>
+            <RedditHeader>
+                <img src={redditLogo} alt="Reddit logo" id="reddit-logo"/>
+                <h1>Reddit</h1>
+            </RedditHeader>
 
             <main>
                 <div className="standard-container">
                     <h2>Hottest Posts</h2>
+                    <p className="subtitle">on Reddit right now</p>
 
                     <div className="post-container">
                         {redditPosts.length > 0 && redditPosts.map((post) => {
