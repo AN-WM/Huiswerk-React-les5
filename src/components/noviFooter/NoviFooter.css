@@ -1,6 +1,7 @@
 footer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--reddit-black);
     color: var(--reddit-white);

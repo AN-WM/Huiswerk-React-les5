@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
     const [error, toggleError] = useState(false);
+    const [loading, toggleLoading] = useState(false);
 
     return (
         <>
@@ -17,6 +18,8 @@ function App() {
                             <Home
                                 error={error}
                                 toggleError={toggleError}
+                                loading={loading}
+                                toggleLoading={toggleLoading}
                             />
                         }
                     />
@@ -27,6 +30,8 @@ function App() {
                             <Subreddit
                                 error={error}
                                 toggleError={toggleError}
+                                loading={loading}
+                                toggleLoading={toggleLoading}
                             />
                         }
                     />

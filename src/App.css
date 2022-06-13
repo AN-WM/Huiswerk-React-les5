@@ -18,7 +18,13 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--reddit-black);
-  background: linear-gradient(100deg, rgba(231,97,58,1) 0%, rgba(221,48,56,1) 100%);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 h1, h2, h3, h4, #subtitle {
@@ -60,3 +66,15 @@ h4 {
   margin: 0 10px;
 }
 
+.error-message {
+  font-size: 2em;
+  color: var(--reddit-red);
+  align-self: center;
+}
+
+.loading {
+  font-size: 2em;
+  color: var(--reddit-black);
+  align-self: center;
+  margin: 40px;
+}
